@@ -1,0 +1,4 @@
+Are you a student?
+Do you like tea?
+Are you going to UTC?
+Are you from China?

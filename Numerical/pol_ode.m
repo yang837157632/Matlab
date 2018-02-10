@@ -1,0 +1,9 @@
+clear;clc;
+t0=0;
+tf=20;
+x0=[0;0.25];
+[t,x]=ode45(@pol_eg,[t0,tf],x0);
+subplot(1,2,1);
+plot(t,x);
+subplot(1,2,2);
+plot(x(:,1),x(:,2));

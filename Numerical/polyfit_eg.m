@@ -1,0 +1,24 @@
+% pn=polyfit(t,y,n); 拟合n次多项式
+clear;clc;
+t=0:5;y=[0 20 60 68 77 110];
+x=0:0.1:5;
+p1=polyfit(t,y,1);y1=polyval(p1,x);
+p2=polyfit(t,y,2);y2=polyval(p2,x);
+p3=polyfit(t,y,3);y3=polyval(p3,x);
+p4=polyfit(t,y,4);y4=polyval(p4,x);
+subplot(2,2,1);
+plot(t,y,'*r');hold on;
+plot(x,y1);
+title('拟合1次多项式');
+subplot(2,2,2);
+plot(t,y,'*g');hold on;
+plot(x,y2);
+title('拟合2次多项式');
+subplot(2,2,3);
+plot(t,y,'*k');hold on;
+plot(x,y3);
+title('拟合3次多项式');
+subplot(2,2,4);
+plot(t,y,'*m');hold on;
+plot(x,y4);
+title('拟合4次多项式');

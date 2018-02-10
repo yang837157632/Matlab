@@ -1,0 +1,23 @@
+% view(az,el) Default -37.5 30
+x=linspace(0,3*pi,100);
+z=[sin(x);sin(2*x);sin(2*x)];
+y=[zeros(size(x));ones(size(x))/2;ones(size(x))];
+subplot(2,2,1);
+plot3(x,y,z);
+grid on;xlabel('x');ylabel('y');zlabel('z');
+title('Default az=-37.5^o  el=30^o');
+subplot(2,2,2);
+plot3(x,y,z);
+grid on;xlabel('x');ylabel('y');zlabel('z');
+title('az=52.5^o');
+view(52.5,30);
+subplot(2,2,3);
+plot3(x,y,z);
+grid on;xlabel('x');ylabel('y');zlabel('z');
+title('el=60^o');
+view(-37.5,60);
+subplot(2,2,4);
+plot3(x,y,z);
+grid on;xlabel('x');ylabel('y');zlabel('z');
+title('az=0^o  el=90^o');
+view(0,90);

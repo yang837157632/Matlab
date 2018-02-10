@@ -1,0 +1,8 @@
+Are you a student?
+Answer: T
+Do you like tea?
+Answer: T
+Are you going to UTC?
+Answer: F
+Are you from China?
+Answer: T

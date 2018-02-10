@@ -1,0 +1,23 @@
+% A=imread(fname)  
+% 灰度图像，则A为二维矩阵；彩色图像，则A为三维矩阵。
+% imwrite(A,fname,fmt)
+% fmt bmp jpg gif tif png...
+[filename, pathname, filterindex] = uigetfile( ...
+        {'*.jpg','JPEG-files (*.jpg)';...
+        '*.bmp','BMP-files (*.bmp)';...
+        '*.gif','GIF-files (*.gif)';...
+        '*.tif','TIFF-files (*.tif)';...
+        '*.*',  'All Files (*.*)'}, ...
+        'Pick a file','MultiSelect', 'on');
+fm=[pathname filename];
+subplot(1,2,1);
+a=imread(fm);
+image(a);
+subplot(1,2,2);
+[b,cmp]=imread(fm);
+image(b);
+colormap(cmp);
+axis image off;
+fm2=input('please input the filename: ','s');
+imwrite(a,fm2,'jpg');
+ 

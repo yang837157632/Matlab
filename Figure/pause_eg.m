@@ -1,0 +1,10 @@
+[x y]=meshgrid(-4:0.1:3,-3:0.1:4);
+z=cos(x).*cos(y).*exp(-sqrt(x.^2+y.^2)/4);
+surf(x,y,z);
+shading flat;
+pause;
+i=find(x<=0&y<=0);
+z1=z;
+z1(i)=NaN;
+surf(x,y,z1);
+shading interp;

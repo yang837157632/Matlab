@@ -1,0 +1,23 @@
+% plot sin cos tan cot subscript \bf \it
+x=0:0.1:2*pi;
+y1=sin(x);y2=cos(x);y3=tan(x);y4=cot(x);
+subplot(2,2,1);
+plot(x,y1,'-+r');
+legend('y=sin(x)');xlabel('x');ylabel('y');
+grid on;
+title('\bfy_{1} = sin(x)');
+subplot(2,2,2);
+plot(x,y2,'--*g');
+legend('y=cos(x)');xlabel('x');ylabel('y');
+grid on;
+title('\ity_{2} = cos(x)');
+subplot(2,2,3);
+plot(x,y3,':db');
+legend('y=tan(x)');xlabel('x');ylabel('y');
+grid on;
+title('\it\bfy_{3} = tan(x)');
+subplot(2,2,4);
+plot(x,y4,'-.pm');
+legend('y=cot(x)');xlabel('x');ylabel('y');
+grid on;
+title('\bf\ity_{4} = cot(x)');
